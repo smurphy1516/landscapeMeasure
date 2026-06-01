@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape Measure - Soon to be the newset way to provide landscape measurement services in one single app.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1e4620 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2c5f2d 0%, #1e4620 100%);
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffc107;
+            color: #333;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #ffb300;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .services {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c5f2d;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            padding: 4rem 0;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            color: #2c5f2d;
+            margin-bottom: 2rem;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌿 Landscape Measure</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Landscape Measure</h1>
+        <p>The newest way to complete landscape takeoffs. With the Landscape Measure app, you can quickly and accurately measure your landscape projects.</p>
+        <a href="#contact" class="cta-button">Contact us today.</a>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🏡 Property Measurement</h3>
+                    <p>Accurate measurements of your landscape and property using latest technology to ensure precision in every project will soon be easier than ever.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎨 Design Consultation</h3>
+                    <p>Expert consultation to transform your outdoor space into a beautiful, functional landscape that matches your vision.</p>
+                </div>
+                <div class="service-card">
+                    <h3>📐 Site Planning</h3>
+                    <p>Comprehensive site planning and analysis to optimize your landscape design and implementation strategy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About Landscape Measure</h2>
+            <p>The team behind Landscape Measure specializes in providing professional landscape measurement and design services to homeowners and businesses throughout the country.</p>
+            <p>With years of experience and a commitment to excellence, our team uses cutting-edge technology and expert knowledge to deliver exceptional results for every project.</p>
+            <p>We believe in creating beautiful outdoor spaces that enhance property value and provide lasting enjoyment for our clients.</p>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 4rem 0; background: #f8f9fa;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: #2c5f2d; font-size: 2.5rem; margin-bottom: 2rem;">Get in Touch</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 2rem;">Landscape Measure is currently in the development stage and will be released for beta testing soon.</p>
+            <a href="mailto:shannonmurphy.80s@gmail.com" class="cta-button">Email Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Landscape Measure. All rights reserved.</p>
+    </footer>
+</body>
+</html>
