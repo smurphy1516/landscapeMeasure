@@ -58,6 +58,21 @@
             color: #3498db;
         }
 
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .menu-toggle:hover {
+            color: #3498db;
+        }
+
         .hero {
             background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23ecf0f1" width="1200" height="600"/></svg>');
             background-size: cover;
@@ -322,17 +337,43 @@
         }
 
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: #2c3e50;
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in-out;
+            }
+
+            .nav-links.active {
+                max-height: 500px;
+            }
+
+            .nav-links li {
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 1rem 2rem;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
 
             .hero p {
                 font-size: 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
             }
 
             .hero-buttons {
@@ -365,7 +406,8 @@
     <header>
         <nav class="container" style="max-width: 100%;">
             <div class="logo"> <img src="SSImage.webp" alt="Shadespan Logo" style="height: 50px; width: auto;"> Powered by <img src="mgIcon.png" alt="Modern Grounds FL Icon" style="height: 60px; width: auto;"> </div>
-            <ul class="nav-links">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#features">Features</a></li>
@@ -500,5 +542,17 @@
             <p style="margin-top: 1rem; font-size: 0.9rem; color: #bdc3c7;">© 2026 Modern Grounds FL. All rights reserved.</p>
         </div>
     </footer>
-</body>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script></body>
 </html>
