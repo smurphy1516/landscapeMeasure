@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shadespan Pergolas - Tampa, FL</title>
+    <title>Shadespan Pergolas - TPA & SRQ, FL</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,7 @@
         }
 
         header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: url('ssRibbon.png') no-repeat center center/cover;
             color: white;
             padding: 1rem 0;
             position: sticky;
@@ -160,7 +160,7 @@
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
@@ -170,7 +170,6 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -187,8 +186,40 @@
 
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: 320px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .featured-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .featured-item {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
         }
 
         #features {
@@ -228,7 +259,7 @@
             display: grid;
             grid-template-columns: repeat(3, minmax(220px, 1fr));
             gap: 2rem;
-            align-items: start;
+            align-items: stretch;
         }
 
         .highlight-card {
@@ -399,13 +430,39 @@
             margin-top: 1rem;
             font-size: 0.9rem;
         }
+
+        .logo {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.25rem;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .logo img {
+            display: block;
+            width: auto;
+            max-height: 60px;
+        }
+
+        .logo .powered-by {
+            font-size: 0.85rem;
+            margin: 0;
+            color: rgba(255,255,255,0.9);
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <header>
         <nav class="container" style="max-width: 100%;">
-            <div class="logo"> <img src="SSImage.webp" alt="Shadespan Logo" style="height: 50px; width: auto;"> Powered by <img src="mgIcon.png" alt="Modern Grounds FL Icon" style="height: 60px; width: auto;"> </div>
+            <div class="logo">
+                <img src="SSImage.webp" alt="Shadespan Logo" style="height: 50px; width: auto;">
+                <span class="powered-by">Powered by</span>
+                <img src="mgIcon.png" alt="Modern Grounds FL Icon" style="height: 55px; width: auto;">
+            </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
@@ -415,6 +472,48 @@
             </ul>
         </nav>
     </header>
+
+    <!-- Top Gallery - Featured Images -->
+    <section id="gallery">
+        <div class="container">
+            <div class="featured-gallery">
+                <div class="featured-item">
+                    <img src="pergSize.png" alt="Shadespan Pergola Size" onerror="this.style.display='none'">
+                </div>
+                <div class="featured-item">
+                    <img src="glassSlide.png" alt="Glass Slide" onerror="this.style.display='none'">
+                </div>
+                <div class="featured-item">
+                    <img src="acc.png" alt="Shadespan Habitat PRO" onerror="this.style.display='none'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Pergola Gallery -->
+    <section id="gallery">
+        <div class="container">
+            <h2>Pergola Gallery</h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="perg-1.png" alt="Shadespan Pergola 1" onerror="this.style.display='none'">
+                    <span style="display: none;">Your pergola image here</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="habitat.png" alt="Shadespan Pergola 2" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-item">
+                    <img src="habitatPRO.png" alt="Shadespan Pergola 3" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-item">
+                    <img src="blackPerg.jpg" alt="Shadespan Pergola 4" onerror="this.style.display='none'">
+                </div>
+                <div class="gallery-item">
+                    <img src="grayPerg.png" alt="Shadespan Pergola 5" onerror="this.style.display='none'"> 
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Hero Section -->
     <section class="highlights-section">
@@ -436,35 +535,10 @@
         </div>
     </section>
 
-    <!-- Image Gallery -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Pergola Gallery</h2>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="perg-1.png" alt="Shadespan Pergola 1" onerror="this.style.display='none'">
-                    <span style="display: none;">Your pergola image here</span>
-                </div>
-                <div class="gallery-item">
-                    <img src="Habitat.png" alt="Shadespan Pergola 2" onerror="this.style.display='none'">
-                </div>
-                <div class="gallery-item">
-                    <img src="HabitatPro.png" alt="Shadespan Pergola 3" onerror="this.style.display='none'">
-                </div>
-                <div class="gallery-item">
-                    <img src="blackPerg.jpg" alt="Shadespan Pergola 4" onerror="this.style.display='none'">
-                </div>
-                <div class="gallery-item">
-                    <img src="grayPerg.png" alt="Shadespan Pergola 5" onerror="this.style.display='none'">
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Features -->
     <section id="features">
         <div class="container">
-            <h2>Why Choose Modern Grounds to build your Shadespan pergola?</h2>
+            <h2>Why Choose Modern Hardscapes to build your Shadespan pergola?</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>🏗️ Premium Quality</h3>
@@ -492,7 +566,7 @@
             <div class="brochure-section">
                 <h3>📋 Download Our Brochure</h3>
                 <p>Learn more about our Shadespan pergola specifications, styles, and customization options.</p>
-                <a class="brochure-btn" onclick="window.open('Shadespan-brochure-usa.pdf', '_blank'); return false;">Download Brochure</a>
+                <a class="brochure-btn" onclick="window.open('Shadespan-brochure-usa (Compressed).pdf', '_blank'); return false;">Download Brochure</a>
                 <p style="margin-top: 1rem; font-size: 0.9rem;">Includes specifications, design options, and pricing information</p>
             </div>
         </div>
